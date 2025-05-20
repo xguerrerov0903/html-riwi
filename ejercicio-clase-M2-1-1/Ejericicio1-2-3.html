@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <title>Ejercicios</title>
+    <!--Importacion libreria font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+    
+    </header>
+    
+    <nav>
+        <!--Menu de navegacion-->
+        <ul style="list-style: none; display:flex; gap: 20px;">
+            <li><a href="#inicio"><i class="fas fa-home"></i>Inicio</a></li>
+            <li><a href="#blog"><i class="fas fa-search"></i>Blog</a></li>
+            <li><a href="#contacto"><i class="fa-solid fa-circle-user"></i></i>Conctacto</a></li>
+            <li><a href="#acerca"><i class="fa-solid fa-thumbs-up"></i></i>Acerca de </a></li>
+    
+        </ul>   
+    </nav>  
+    <main style="background-color: antiquewhite;">
+        <!--Video-->
+        <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls width="640">Tu navegador no soporta la etiqueta de video.</video>
+        <section style="background-color: rgb(239, 198, 255);">
+            <!--Formulario-->
+            <h1>Formulario:</h1>
+            <form>
+                <!--Nombre-->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required><br><br>
+                <!--Correo-->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu email" required><br><br>
+                <!--Edad-->
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad" required><br><hr>
+                <!--Boton-->              
+                <button type="submit">Enviar</button><br><br>
+            </form>
+            <!--Imagen-->
+            <article style="background-color: rgb(198, 255, 233);">
+                <br>
+                <blockquote>
+                    <img src="https://www.rae.es/sites/default/files/styles/wysiwyg_100_/public/2021-07/ramdomtwitter_Mesa%20de%20trabajo%201.png?itok=JfO9YVoD "
+                    usemap="#img-mapa"
+                    alt="Imagen random"
+                    width="450" height="300">
+                    <!--coords="x1,y1,x2,y2"-->
+                    <!--Mapa para imagen-->
+                    <map name="img-mapa">
+                        <!--Arriba-->
+                        <area shape="rect" coords="0,0,300,200" 
+                        href="https://es.wikipedia.org/wiki/Paisaje" 
+                        alt="Ir a Wikipedia" 
+                        target="_blank">
+                        <!--Abajo-->
+                        <area shape="rect" coords="0,200,300,450" 
+                        href="https://www.google.com/maps" 
+                        alt="Ir a Google maps" 
+                        target="_blank">
+                    </map> 
+                </blockquote>
+                <br>
+            </article>
+        </section>
+            <!--Tabla de horario-->
+            <table border="2" style="background-color: beige; color:rgb(106, 74, 138); border: 1px solid rgb(63, 60, 230);">
+                <caption>Horaio de clases</caption>
+                <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miercoles</th>
+                </tr>
+                <tr>
+                    <td>6:00 am</td>
+                    <td>Estudio</td>
+                    <td>Estudio</td>
+                    <td>Repaso</td>
+                </tr>
+                <tr>
+                    <td>9:00 am</td>
+                    <td>Descanso</td>
+                    <td>Repaso</td>
+                    <td>Descanso</td>
+                </tr>
+                <tr>
+                    <td>11:00 am</td>
+                    <td>Repaso</td>
+                    <td>Descanos</td>
+                    <td>Estudio</td>
+                </tr>
+            </table>
+            <!--Lista anidada-->
+            <ol>
+                <li>Matematicas
+                    <ul>
+                        <li>Geometria</li>
+                        <li>Estadistica</li>
+                        <li>Algebra</li>
+                    </ul>
+                </li>
+                <li>Ciencias
+                    <ul>
+                        <li>Biologia</li>
+                        <li>Quimica</li>
+                    </ul>
+                </li>
+            </ol>
+        <!--Texto citado-->
+        <section style="background-color: rgb(255, 229, 180);">
+            <blockquote cite="URL">
+                <p>Un texto para cita</p>
+                <cite>De Alfredo</cite>
+            </blockquote>
+    
+        </section>
+    </main>
+    
+    
+    <footer>    
+    </footer>
+</body>
