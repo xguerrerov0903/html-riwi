@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ximena's portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Ximena as a Riwi developer.">
+    <meta name="author" content="Ximena G. V.">
+    <!--Importacion libreria font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        header{
+            background-color: rgb(181, 232, 232);
+            font-style:oblique;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span style="color: rgb(210, 73, 130);">Ximena</span> - Riwi Developer</h1>
+    </header>   
+    <nav>
+        <!--Menu de navegacion-->
+        <ul style="list-style: none; display:flex; gap: 20px;">
+            <li><a href="#about-me"><i class="fas fa-home"></i>About me</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-file"></i>Projects</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-circle-user"></i>Conctact</a></li>
+    
+        </ul>   
+    </nav>  
+    <main style="background-color: antiquewhite;">
+        <!--PFP-->
+        <img src="https://media.discordapp.net/attachments/1374000774719209552/1374527539342737450/IMG_20250120_205851.jpg?ex=682e6006&is=682d0e86&hm=60c9572c7967974e6f6d9b8b3e4c2fd3dd699aa940401a7a21f8a30a0ea1bf84&=&format=webp&width=698&height=930"
+         alt="Ximena's photo" width="300">
+         <!--About me-->
+         <section id="about-me">
+            <h2>About me</h2>
+            <p>Hello, I am Ximena Guerrero Villa</p>
+            <p>I'm a coder in Riwi ready to learn, I have an undergraduate degree in systems engineering but never explored much the world of programming until now, I hope my portfolio will be interesting for you.</p>
+            <img src="https://media.discordapp.net/attachments/1323802551522430976/1324385085419688008/image0-1.gif?ex=682de43a&is=682c92ba&hm=52d4dd8a3c5302365dbf140d9ace53c0f87d9488d3e62c3a3ccc7cc7c0ad2e1e&=&width=438&height=59"
+            alt="Chango">
+         </section>
+            <!--Tabla de horario-->
+            <table border="2" style="background-color: beige; color:rgb(106, 74, 138); border: 1px solid rgb(63, 60, 230);">
+                <caption>Horaio de clases</caption>
+                <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miercoles</th>
+                </tr>
+                <tr>
+                    <td>6:00 am</td>
+                    <td>Estudio</td>
+                    <td>Estudio</td>
+                    <td>Repaso</td>
+                </tr>
+                <tr>
+                    <td>9:00 am</td>
+                    <td>Descanso</td>
+                    <td>Repaso</td>
+                    <td>Descanso</td>
+                </tr>
+                <tr>
+                    <td>11:00 am</td>
+                    <td>Repaso</td>
+                    <td>Descanos</td>
+                    <td>Estudio</td>
+                </tr>
+            </table>
+            <!--Lista anidada-->
+            <ol>
+                <li>Matematicas
+                    <ul>
+                        <li>Geometria</li>
+                        <li>Estadistica</li>
+                        <li>Algebra</li>
+                    </ul>
+                </li>
+                <li>Ciencias
+                    <ul>
+                        <li>Biologia</li>
+                        <li>Quimica</li>
+                    </ul>
+                </li>
+            </ol>
+        <!--Texto citado-->
+        <section style="background-color: rgb(255, 229, 180);">
+            <blockquote cite="URL">
+                <p>Un texto para cita</p>
+                <cite>De Alfredo</cite>
+            </blockquote> 
+        </section>
+        <!--Contact-->
+        <section id="contact" style="background-color: rgb(239, 198, 255);">
+            <!--Form-->
+            <h1>Contact:</h1>
+            <form>
+                <!--Name-->
+                <label for="name">Name:</label>
+                <input type="name" id="name" name="name" placeholder="Enter your name:" required><br><br>
+                <!--Email-->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email:" required><br><br>
+                <!--Text message-->
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea><br><hr>
+                <!--Button-->              
+                <button type="submit" value="Send">Send</button><br><br>
+            </form>
+        </section>
+    </main>  
+    <footer style="background-color: rgb(210, 255, 229)">
+        <hr>
+        <h2><a href="https://github.com/xguerrerov0903"><i class="fab fa-github"></i>My Github </a></h2><br>
+    </footer>
+</body>
+</html>
