@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Taller Práctico HTML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejercicio 3">
+    <meta name="author" content="Ximena G. V.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Encabezado del Portafolio -->
+    <header style="background-color: rgb(181, 232, 232); font-style: oblique;">
+        <h1><span style="color: rgb(210, 73, 130);">Ximena</span> - Riwi Developer</h1>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <!-- Ejercicio 7: menu de navegacion -->
+    <!-- Se uso parte del codigo de la entrega de la semana para esto -->
+    <nav>
+        <ul>
+            <li><a href="#about-me"><i class="fas fa-home"></i> About me</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-file"></i> Projects</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-circle-user"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Ejercicio 1: Hola Mundo -->
+        <h1>Hola Mundo</h1>
+        <p>Esta es mi primera página en HTML.</p>
+
+        <!-- Ejercicio 2: Listas -->
+        <h2>Frutas Favoritas</h2>
+        <ul>
+            <li>Manzana</li>
+            <li>Banano</li>
+            <li>Fresa</li>
+        </ul>
+
+        <h2>Pasos para preparar café</h2>
+        <ol>
+            <li>Hervir el agua</li>
+            <li>Agregar café al filtro</li>
+            <li>Verter agua caliente</li>
+            <li>Servir y disfrutar</li>
+        </ol>
+
+        <!-- Ejercicio 3: Enlaces-->
+        <h2>Enlaces</h2>
+        <a href="https://www.google.com" target="_blank">Ir a Google</a><br>
+        <a href="contacto.html">Ir a Contacto</a><br>
+        <a href="https://github.com/xguerrerov0903" target="_blank"><img src="Assets/github-logo.png" alt="Logo Github" width="100"></a>
+
+        <!-- Ejercicio 4: Imagen -->
+
+        <h2>Imagen desde Internet</h2>
+        <img src="https://picsum.photos/400/300" alt="Imagen aleatoria">
+
+        <!-- Ejercicio 5: Video local -->
+        <h2>Video</h2>
+        <video src="Assets/dado.mp4" controls width="600">
+            Tu navegador no soporta el video.
+        </video><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9w0_e9X4FDw?si=Y5G_SiXKDOlEA27s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <!-- Ejercicio 6: Tabla simple -->
+        <h2>Tabla de Personas</h2>
+        <table border="1">
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Ciudad</th>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>28</td>
+                <td>Medellín</td>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>35</td>
+                <td>Bogota</td>
+            </tr>
+            <tr>
+                <td>Lucía</td>
+                <td>22</td>
+                <td>Cali</td>
+            </tr>
+        </table>
+
+        <!-- About me del portafolio -->
+        <section id="about-me">
+            <h2>About me</h2>
+            <p>Hello, I am Ximena Guerrero Villa</p>
+            <p>I'm a coder in Riwi ready to learn, I have an undergraduate degree in systems engineering but never explored much the world of programming until now, I hope my portfolio will be interesting for you.</p>
+            <img src="https://media.discordapp.net/attachments/1323802551522430976/1324385085419688008/image0-1.gif" alt="Chango">
+            <br>
+            <img src="https://media.discordapp.net/attachments/1374000774719209552/1374527539342737450/IMG_20250120_205851.jpg" alt="Ximena's photo" width="300">
+            <strong><p>Beginner skills</p></strong>
+            <ul>
+                <li>Python</li>
+                <li>Html</li>
+                <li>CSS</li>
+            </ul>
+            <hr>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <h3>Project 1: Portfolio Website</h3>
+            <p>This is my first project where I built a personal portfolio using only HTML.</p>
+            <img src="https://cdn.discordapp.com/attachments/1374000774719209552/1374545827963600997/image.png" alt="SS-Web-Portfolio" width="200">
+            <table border="1">
+                <tr>
+                    <th>Project Name</th>
+                    <th>Technologies Used</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Portfolio Website</td>
+                    <td>HTML</td>
+                    <td><a href="https://github.com/xguerrerov0903/html-riwi/blob/main/Entrega-1/portafolio_ximena.html">View Project</a></td>
+                </tr>
+                <tr>
+                    <td>Random nonogram</td>
+                    <td>Python</td>
+                    <td><a href="https://github.com/xguerrerov0903/xguerrerov0903/blob/main/Matriz.py">View Project</a></td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact">
+            <h2>Formulario de Contacto</h2>
+            <form>
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required><br><br>
+                <label for="email">Correo:</label><br>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu email" required><br><br>
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" placeholder="Ingresa tu mensaje" required></textarea><br><hr>
+                <button type="submit">Enviar</button><br><br>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <h2><a href="https://github.com/xguerrerov0903"><i class="fab fa-github"></i> My Github</a></h2><br>
+    </footer>
+</body>
+</html>
