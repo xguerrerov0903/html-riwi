@@ -1,0 +1,16 @@
+/* Selectors with specificity */
+
+/* Como no tengo ninguna especificacion aqui ira por todos los elementos div */
+div {
+    color: blue;
+}
+
+/*Se volvera rojo cualquier cosa cuando haya una accion */
+.highlight {
+    color: red;
+}
+
+/* El "#" se refiere a id */
+#special{
+    color: green;
+}
