@@ -10,7 +10,76 @@ div {
     color: red;
 }
 
+.copy-cat {
+    color: rgb(107, 55, 55);
+}
+
 /* El "#" se refiere a id */
 #special{
     color: green;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 20 px;
+    margin: 10 px;
+}
+
+.content{
+    width: 300 px;
+    padding: 20 px;
+    margin: 10 px;
+    border: 5 px solid #333;
+}
+
+.inline-block{
+    display: inline-block;
+    width: 100 px;
+    height: 100 px;
+    background-color: lightblue;
+}
+
+.fixed-box {
+    position: fixed;
+    top: 10 px;
+    right: 10 px;
+    background-color: red;
+    padding: 10 px;
+}
+
+.rotate-box{
+    width: 100 px;
+    height: 100 px;
+    background-color: yellow;
+    transform: rotate(45deg);
+}
+
+a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.box::before{
+    content: "New!";
+    color: red;
+    font-weight: bold;
+}
+
+.fade-in{
+    animation: fade 2s ease-in-out;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
