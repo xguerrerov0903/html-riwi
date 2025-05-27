@@ -8,7 +8,8 @@
             width: 100px;
             height: 100px;
             background-color: blue;
-            transform: rotate(45deg);
+            /*Al estar la tranfirmacion aqui se aplicaba directamente, no se veia*/
+            /*transform: rotate(45deg);*/
             transition: transform 2s;
         }
         
@@ -16,21 +17,32 @@
             transform: rotate(90deg);
             background-color: green;
             transition: background-color 0.5s;
+
         }
         
         .scale-box {
             width: 100px;
             height: 100px;
-            background-color: red;
-            transform: scale(1.5);
+            background-color: red;            
             margin: 50px;
         }
-        
+        /*El crear el hover para la clase cada que se pase el mouse por encima sucedera la accion*/
+        .scale-box:hover{
+            transform: scale(1.5);
+
+        }
+        /*Correcion del nombre que estaba mal escrito*/
         .translate-box {
             width: 100px;
             height: 100px;
             background-color: yellow;
-            transform: translateX(50px, 20px);
+            /*transform: translateX(50px, 20px);*/
+        }
+
+        /*Se agrega hover para que active la transformacion*/
+        .translate-box:hover{
+            /* translateX solo acepta un valor para x*/
+            transform: translateX(50px);
         }
     </style>
 </head>
