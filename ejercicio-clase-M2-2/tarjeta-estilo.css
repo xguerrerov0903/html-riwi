@@ -1,23 +1,48 @@
+
+/*El asterisco es el selector universal, esta regla se aplicara a todos los elementos html por lo tanto*/
+*{
+    /* Asegura que el padding y el borde se incluyan dentro del ancho/alto total del elemento.
+   Evita que los elementos se salgan de su contenedor en diseños responsivos. */
+    box-sizing: border-box;
+}
+
 body {
     height: 100vh;
+    padding: 10 px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+
 .card {
-    width: 500px;
+    width: 100%;
+    max-width: 400px;
     border: 6px solid rgb(169, 162, 190);
     border-style: double;
     border-radius: 8px;
     padding: 10px;
-    margin: 9px;
+    margin: 20px;
     box-shadow: 10px 10px 5px lightblue;
     background-color: rgb(238, 229, 255);
     transition: transform 0.6s, box-shadow 0.6s;
 
 }
+
+header{
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    font-size: larger;
+    color: rgb(70, 53, 91);
+}
+
+.description{
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    font-size: medium;
+    color: rgb(62, 42, 88);
+    line-height: normal;
+}
+
 .image-product{
     display: flex;
     justify-content: center;
@@ -42,11 +67,17 @@ body {
     align-items: flex-end;
     width: 100%;
     gap: 10px;
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px  rgb(134, 93, 157);
+    text-decoration: underline;
 }
 
 .button-buy{
     display: flex;
     justify-content: center;
+    
 
 
 }
@@ -56,6 +87,8 @@ body {
     background-color: rgb(125, 94, 128);
     border: 0px; 
     border-radius: 4px;
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    font-size: medium;
     transition: background-color 0.5s
 
 }
