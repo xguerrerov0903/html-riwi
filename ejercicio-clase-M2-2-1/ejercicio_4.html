@@ -5,6 +5,9 @@
     <title>Modelo de Caja</title>
     <style>
         * {
+            /*Esta declaracion hara modificar la forma en que se calcula el tamaño de mi elemento
+            esto en referencia qe si declara que mi elemento mide 200px y agrega tanto padding como border
+            el calculo se hara para llegar a los 200px y no sumando */
             box-sizing: border-box;
         }
         
@@ -14,11 +17,14 @@
         }
         
         .box {
+
             width: 200px;
             height: 200px;
             background-color: lightblue;
             margin: 20px;
             padding: 30px;
+            /*Usar inline hace que el resto de sus atributos menos el color sean inutiles ya que el elemento
+            solo ocupara lo que necesite su contenido al ser inline*/
             display: inline;
         }
         
@@ -32,10 +38,13 @@
         }
         
         .block {
+            /*Block le dara una linea propia a mi elemento, es por eso que empieza una linea debajo a diferencia de los otros elementos que vimos*/
             display: block;
             width: 300px;
             height: 100px;
             background-color: lightcoral;
+            /*Mi primer valor en margin sera para el componen y mientras el segundo para x, al usar auto este pondra el mismo
+            valor en ambos lados de x, de esa forma centrandolo*/
             margin: 15px auto;
             padding: 25px;
         }

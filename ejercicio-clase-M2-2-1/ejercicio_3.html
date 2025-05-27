@@ -4,30 +4,41 @@
     <meta charset="UTF-8">
     <title>Selectores CSS</title>
     <style>
+        /*Selector general para elementos p*/
         p {
             color: blue;
         }
-        
+
+        /*Si un elemento p tiene clase text el verde se pondra y no el azul*/
         .text {
             color: green;
         }
-        
+        /*Llama al id con el #*/
         #unique {
+            /*El important la da prioridad sobre cualquier otro estilo, por encima de otros asi haya algunos mas especificos*/
             color: red !important;
         }
         
-        div p .text {
+        /* Este estilo se aplicara a elemento text que esten dentro de un p, que esten dentro de un div*/
+        /*La razon por el que no se esta aplicando es por el important de la anteriro seccion que toma mas importancia*/
+        /* Se elemino el especio para que ahora a condicion sea aplciada a cualquier elemento p que tenga clase text
+        que este dentro de un div*/
+        div p.text {
             color: purple;
         }
         
+        /*Solo los parrafos que sean hijos directos de un div se veras afectados, siempre y cuando no tenga otra
+        modificacion por class o id, que sea directo asi que por eso span no cuenta*/
         div > p {
             font-weight: bold;
         }
         
+        /*Si el elemento es el primero hijo de su padre se vera afectado, esto pasa con el primer p del div y el p del span*/
         p:first-child {
             text-decoration: underline;
         }
         
+        /*La primera letra de todo elementos p se vera afectado, siendo 200%(el doble) mas grande que el resto*/
         p::first-letter {
             font-size: 200%;
         }
@@ -36,6 +47,7 @@
 <body>
     <div>
         <p class="text" id="unique">Este es un párrafo único</p>
+        <p class="text">Este es un que no es afectado por el !important</p>
         <p>Este es otro párrafo</p>
         <span><p>Párrafo dentro de span</p></span>
     </div>
