@@ -2,7 +2,7 @@
 /*El asterisco es el selector universal, esta regla se aplicara a todos los elementos html por lo tanto*/
 *{
     /* Asegura que el padding y el borde se incluyan dentro del ancho/alto total del elemento.
-   Evita que los elementos se salgan de su contenedor en diseños responsivos. */
+   Evita que los elementos se salgan de su contenedor en diseños responsivos. (para celular)*/
     box-sizing: border-box;
 }
 
