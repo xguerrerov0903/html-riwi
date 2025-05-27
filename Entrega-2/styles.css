@@ -28,35 +28,35 @@ body {
     background-color: #ffffff;
     border: 2px solid #000;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    padding: 20 px;
-    margin: 10 px;
+    padding: 20px;
+    margin: 10px;
 }
 
 .content{
-    width: 300 px;
-    padding: 20 px;
-    margin: 10 px;
-    border: 5 px solid #333;
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    border: 5px solid #333;
 }
 
 .inline-block{
     display: inline-block;
-    width: 100 px;
-    height: 100 px;
+    width: 100px;
+    height: 100px;
     background-color: lightblue;
 }
 
 .fixed-box {
     position: fixed;
-    top: 10 px;
-    right: 10 px;
+    top: 10px;
+    right: 10px;
     background-color: red;
-    padding: 10 px;
+    padding: 10px;
 }
 
 .rotate-box{
-    width: 100 px;
-    height: 100 px;
+    width: 100px;
+    height: 100px;
     background-color: yellow;
     transform: rotate(45deg);
 }
@@ -66,6 +66,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/*antes de cada elemento clase claja aparece un New!*/
 .box::before{
     content: "New!";
     color: red;
