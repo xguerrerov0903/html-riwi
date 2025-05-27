@@ -5,11 +5,18 @@
     <title>Texto y Fuentes</title>
     <style>
         body {
-            font: Arial, sans-serif;
+
+            /*  Esta mal declarada ya que al usar font la variable espera que tambien le declare el tamaño de la fuente
+            , al no exisitr una declaracin de tamaño al ejecutarse la instruccion es ignorada*/
+            font: 1em Arial, sans-serif;
+            /* line-height define la distancia entre linea en formato de altura*/
+            /* Por su parte la medida em es relativa al tamaño de la fuente, 1 em equivale al tamaño actual de la fuente
+            por lo tanto 1.5 la fuente actual mas 50% mas de esta*/
             line-height: 1.5em;
         }
         
         h1 {
+            /*La primera fuente si esta disponibles y dos fuentes de respando en caso de no estarlo*/
             font-family: "Times New Roman", Times, serif;
             text-align: center;
             text-decoration: underline;
@@ -20,7 +27,8 @@
             font-size: 16px;
             text-align: justify;
             letter-spacing: 1px;
-            word-spacing 2px;
+            /*Hace falta los dos puntos : */
+            word-spacing: 2px;
         }
         
         .special {
@@ -31,8 +39,19 @@
         
         #quote {
             font-style: italic;
+            /*La funcion quotes no funciona por su sola se debe establecer donde ira con after y before ademas que siempre debe ir con quien cierra y quien abre
+            por eso mismo abajo se declarar el before (con el open) y el after (con el close)*/
             quotes: "«" "»";
         }
+
+        #quote::before{
+            content: open-quote;
+        }
+
+        #quote::after{
+            content: close-quote;
+        }
+
     </style>
 </head>
 <body>
