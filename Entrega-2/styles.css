@@ -1,16 +1,16 @@
 /* Selectors with specificity */
 
-/* Como no tengo ninguna especificacion aqui ira por todos los elementos div */
+/* Estilo por defecta para todos los elementos div */
 div {
     color: blue;
 }
 
-/*Se volvera rojo cual clase con highlight pero no se ve aplicada ya que mas adelante hay una declaracion que se sobrepone*/
+/*Se volvera rojo cualquier clase con highlight pero no se ve aplicada ya que mas adelante hay una declaracion que se sobrepone al ser un llamado al id*/
 .highlight {
     color: red;
 }
 
-/* aqui estoy llamando a una clase al empezar con . */
+/* Aqui estoy llamando a una clase al empezar con .(nombre de la clase) */
 .copy-cat {
     color: rgb(107, 55, 55);
 }
@@ -21,10 +21,12 @@ box con highlight son vistos verde al tener la id special */
     color: green;
 }
 
+/* Color gris claro para el body en general */
 body {
     background-color: #f0f0f0;
 }
 
+/*Toda clase que tenga box se le aplicara la aqui declarado, una caja con sombra, padding y margin*/
 .box {
     background-color: #ffffff;
     border: 2px solid #000;
@@ -35,6 +37,7 @@ body {
     margin: 10px;
 }
 
+/* Contenedor para la clase content especifico con ancho, borde grueso y padding */
 .content{
     width: 300px;
     padding: 20px;
@@ -62,7 +65,7 @@ body {
     padding: 10px;
 }
 
-/*Rota la caja y la da color especial*/
+/*Rota la caja y la da color especial, aplica a elementos declarado con clase rotate.box*/
 .rotate-box{
     width: 100px;
     height: 100px;
@@ -76,17 +79,19 @@ a:hover {
     text-decoration: underline;
 }
 
-/*antes de cada elemento clase caja aparece un New!*/
+/*Antes de cada elemento clase caja aparece un New!*/
 .box::before{
     content: "New!";
     color: red;
     font-weight: bold;
 }
 
+/* Clase que aplica la animacion de aparicion progresiva */
 .fade-in{
     animation: fade 4s ease-in-out;
 }
 
+/* Definicion de la animación "fade" (opacidad de 0 a 1) */
 @keyframes fade{
     0%{
         opacity: 0;
@@ -95,3 +100,6 @@ a:hover {
         opacity: 1;
     }
 }
+
+/*Los comentarios aqui y en el html son tanto como documentacion como nota para mi misma, por eso algunas estan mas especificadas que otra
+el objetivo es que estas entregas y sus comentarios de documentacion sean utiles para mi en la Prueba de desempeño*/

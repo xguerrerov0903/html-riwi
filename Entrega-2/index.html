@@ -4,49 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Ninja</title>
+  <!--Vinculacion con el CSS para los estilos-->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
+    <!--Encabezado-->
     <h1>Welcome to CSS Ninja Training</h1>
     <p>Become a master of CSS styles and effects!</p>
   </header>
 
   <main>
+    <!-- Seccion que muestra como funciona la especificidad de los selectores -->
     <section class="content">
       <h2>CSS Selectors and Specificity</h2>
       <!--El id special es quien la da indicacion a mi css-->
       <div class="box highlight" id="special">This box is special!</div>
     </section>
 
+    <!-- Seccion duplicada con cambio de clase, una prueba para ver el mismo formato fuero de lo que da la declaracion para la clase content-->
     <section class="copy-cat">
       <h2>CSS Selectors and Specificity</h2>
       <div class="box highlight" id="special">This box is special!</div>
     </section>
 
+    <!-- Seccion para mostrar efectos visuales (borde, sombra y rotación) -->
     <section class="visual-effects">
       <h2>Visual Customization</h2>
+      <!--Clase box-->
       <div class="box">This box has a shadow and border!</div>
+      <!--Clase rotate-box-->
       <div class="rotate-box">Rotated Box</div>
     </section>
 
+    <!--Seccion interactiva al pasar el mouse por encima (hover) habra un cambio de color-->
     <section class="interactivity">
       <h2>Interactive Elements</h2>
       <a href="#">Hover over me!</a>     
     </section>
 
+      <!--Seccion con animacion con keyframe-->
     <section class="animation">
+      <!-- Se le aplica la clase box. Fade-in se encarga la animación -->
       <h2 class="box fade-in"> Hello I am here, fade in</h2>
+      <!-- La inacion es de aparicion de la caja al iniciar la pagina en caso de no verla se recomienda reiniciarla por eso mismo-->
       <h6>If you don't see the animation reload the page</h6>
     </section>
 
+    <!-- Caja con posicion fija (siempre visible aunque se haga scroll) -->
     <section class="fixed-box">
       <h2>This is a fixe-box be there forever</h2>
     </section>
-
-
   </main>
 
+  <!--Pie de pagina-->
   <footer>
     <p>Created by a CSS Ninja in training</p>
   </footer>
