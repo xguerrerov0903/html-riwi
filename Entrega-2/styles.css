@@ -84,7 +84,7 @@ a:hover {
 }
 
 .fade-in{
-    animation: fade 2s ease-in-out;
+    animation: fade 4s ease-in-out;
 }
 
 @keyframes fade{
