@@ -1,0 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.img-banner img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
