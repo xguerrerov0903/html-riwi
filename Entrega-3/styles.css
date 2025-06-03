@@ -21,7 +21,7 @@ header {
     padding: 10px 20px;
 }
 
-nav ul {
+.nav-list {
     /*Declarado asi solo hace que tenga los elementos default de flex
     por lo tanto la navegacion sera: row, nowrap. Solo estos porque header declarado mas
     arriba y el cual pertene nav declara otras cosas*/
@@ -29,11 +29,14 @@ nav ul {
     list-style: none;
 }
 
-nav ul li {
+/*Especificacion que se puede poner simplenente en su elemento a*/
+/*nav ul li {
     margin: 0 15px;
-}
+}*/
 
-nav ul li a {
+.nav-list a {
+    /*Quitar el formato default de a*/
+    margin: 0 15px;
     color: white;
     text-decoration: none;
 }
@@ -67,7 +70,7 @@ main {
     flex: 1;
 }
 
-/*-------------------*/
+/*--------Para permitir el responsive----------*/
 
 /*Creo un diseño responsivos para pantallas menores a 768 px*/
 @media (max-width: 768px) {
