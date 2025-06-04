@@ -180,7 +180,14 @@ footer {
         z-index: 3;
   }
 
+  nav ul{
+    flex-direction: column;
+  }
+
+
+
     #menu-toggle:checked ~ .responsive-nav {
         display: flex;
     }
+
 }
