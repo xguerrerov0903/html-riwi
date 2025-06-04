@@ -9,7 +9,7 @@ html {
 
 body {
     font-family: "WDXL Lubrifont TC", sans-serif;
-    background-color: #fdf6f0;
+    background-color: #f8ece2;
     margin: 0;
     padding: 0;
 }
@@ -20,7 +20,7 @@ header.menu-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px;
 }
 
 .nav-list {
@@ -29,11 +29,9 @@ header.menu-header {
     padding: 0;
 }
 
-.nav-list li {
-    margin: 0 15px;
-}
 
 .nav-list a {
+    margin: 0 15px;
     color: white;
     text-decoration: none;
 }
@@ -60,7 +58,7 @@ header.menu-header {
     padding: 10px;
     margin: 0 auto;
     box-shadow: 8px 8px 5px rgba(94, 78, 66, 0.2);
-    background-color: #f4eae0;
+    background-color: #eee1d8;
     transition: transform 0.6s, box-shadow 0.6s;
 }
 
@@ -81,7 +79,7 @@ header h1, .description, .price {
 
 .image-product img {
     width: 95%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
     object-position: center center;
     border-radius: 8px;
@@ -147,9 +145,3 @@ header h1, .description, .price {
     }
 }
 
-@media (min-width: 1200px) {
-    .grid-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-}
