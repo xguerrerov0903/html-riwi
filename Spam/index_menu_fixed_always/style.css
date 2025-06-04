@@ -1,0 +1,422 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.img-banner img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center center;
+}
+
+body {
+    background-color: #fdf6f0;
+    color: #4e342e;
+    padding: 0 1rem;
+}
+
+header {
+    text-align: center;
+    background-color: #6d4c41;
+    padding: 1rem 0;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background-color: #5d4037;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffccbc;
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#menu-section button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    color: #4e342e;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    background-color: #fff3e0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(170, 140, 110, 0.2);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #bcaaa4;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+button {
+    background-color: #6d4c41;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #8d6e63;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fffaf3;
+    box-shadow: 2px 2px 8px rgba(160, 120, 90, 0.2);
+}
+
+table th, table td {
+    padding: 0.75rem;
+    border: 1px solid #bcaaa4;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #4e342e;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* --- MENÚ HAMBURGUESA --- */
+
+/* Menú hamburguesa base */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 1rem;
+  z-index: 2;
+}
+
+.menu-icon span,
+.menu-icon span::before,
+.menu-icon span::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon span::before {
+  content: "";
+  top: -8px;
+  position: absolute;
+}
+
+.menu-icon span::after {
+  content: "";
+  top: 8px;
+  position: absolute;
+}
+
+#menu-toggle:checked + .menu-icon span {
+  transform: translateX(-50%) rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-icon span::before {
+  transform: rotate(-90deg);
+  top: 0;
+}
+
+#menu-toggle:checked + .menu-icon span::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+/* Estilo del menú */
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5d4037;
+  padding: 2rem 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  list-style: none;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+
+.menu a:hover {
+  color: #ffccbc;
+}
+
+#menu-toggle:checked ~ nav ul.menu {
+  display: flex;
+}
+
+/* Mostrar hamburguesa solo en móvil */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .responsive-nav ul {
+    display: none;
+  }
+
+  #menu-toggle:checked + .menu-icon + .responsive-nav ul {
+    display: flex;
+  }
+}
+
+/* Mostrar menú directamente en desktop */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .responsive-nav ul.menu {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #5d4037;
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .responsive-nav li {
+    margin: 0;
+  }
+}
+
+
+/* --- FIXED: Menú hamburguesa siempre en top --- */
+
+/* Estilos corregidos para el botón hamburguesa */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 3;
+  background-color: #5d4037;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.menu-icon span,
+.menu-icon span::before,
+.menu-icon span::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #ffffff;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon span {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-icon span::before {
+  content: "";
+  top: -8px;
+  position: absolute;
+}
+
+.menu-icon span::after {
+  content: "";
+  top: 8px;
+  position: absolute;
+}
+
+#menu-toggle:checked + .menu-icon span {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-icon span::before {
+  transform: rotate(-90deg);
+  top: 0;
+}
+
+#menu-toggle:checked + .menu-icon span::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+/* Menú en móviles */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5d4037;
+    padding: 2rem 0;
+    position: fixed;
+top: 0;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .menu a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 1rem 0;
+  }
+
+  .menu a:hover {
+    color: #ffccbc;
+  }
+
+  #menu-toggle:checked ~ nav ul.menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
+/* Menú también fijo en modo escritorio */
+@media (min-width: 769px) {
+  .responsive-nav ul.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  main {
+    margin-top: 70px; /* para que el contenido no quede oculto detrás del menú */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .menu-icon {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 4;
+    background-color: #5d4037;
+    padding: 0.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .responsive-nav ul.menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #5d4037;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 3;
+  }
+
+  #menu-toggle:checked ~ nav ul.menu {
+    display: flex;
+  }
+
+  main {
+    margin-top: 70px;
+  }
+}
+
+

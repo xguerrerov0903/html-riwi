@@ -29,12 +29,10 @@
         </div>
     </header>
 
-    <nav>
+    <nav class="responsive-nav">
         <!--MENU HAMBURGUESA PARA MOVIL, investigar-->
         <!--Menu navegacion-->
         <!--Explica cada parte, porque el display flex aqui?-->
-        <!--Debes cambiar los iconos-->
-        <!--DEBE HABER DIFERENTES PAGINAS A LAS QUE ME LLEVEN-->
         <ul style="list-style: none; display:flex; gap: 20px;">
 
             <li><a href="#menu"><i class="fa-solid fa-book-open"></i> Menu</a></li>
@@ -48,19 +46,25 @@
 
     <main>
         <!--Me lleva a una pagina aparte donde esta la navegacion como siempre conoci por id, usar lo aprendido para el hober -->
-        <section id="menu">
-            <button><a href="menu.html">Menu</a></button>           
+        <section id="menu-section">
+            <button><a href="menu.html" target="_blank">Menu</a></button>           
         </section>
         <!--Hacer la galeria aqui-->
         <section id="about-us">
+            <h2>About Us</h2>
+            <p>
+                At Café de la Loma, we believe in the beauty of handcrafted coffee and warm hospitality. 
+                Our cozy space is a haven for coffee lovers seeking comfort and quality. 
+                From traditional brews to modern blends, every cup is made with heart and soul.
+            </p>
             
-
         </section>
         <!--Sincronizar con google maps-->
         <section id="location">
-
+            <h2>Our Location</h2>
+            <p>Cra. 43 #10-10, Medellín, Antioquia, Colombia</p>
         </section>
-        <section id="opening-hour">
+        <section id="opening-hours">
         <h2>Opening Hours:</h2>
         <table border="1">
             <tr>
@@ -140,13 +144,13 @@
                 </select><br><br>
 
                 <!-- Preferred area -->
-                <label for="zona">Zona preferida:</label><br>
-                <input type="radio" id="interior" name="zona" value="interior" required> Interior<br>
-                <input type="radio" id="exterior" name="zona" value="exterior" required> Exterior<br><br>
+                <label for="zona">Preferred seating:</label><br>
+                <input type="radio" id="interior" name="zona" value="interior" required> Indoor<br>
+                <input type="radio" id="exterior" name="zona" value="exterior" required> Outdoorr<br><br>
 
                 <!-- Comments -->
-                <label for="message">Comentarios adicionales:</label><br>
-                <textarea id="message" name="message" placeholder="Ej: Soy alérgico al maní" required></textarea><br><br>
+                <label for="message">Additional comments:</label><br>
+                <textarea id="message" name="message" placeholder="e.g., I'm allergic to peanuts" required></textarea><br><br>
 
                 <!-- Terms -->
                 <label for="agree">Do you accept the terms and conditions?</label><br>

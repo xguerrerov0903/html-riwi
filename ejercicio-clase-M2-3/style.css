@@ -3,6 +3,7 @@ html {
 }
 
 * {
+    font-family: "WDXL Lubrifont TC", sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -18,7 +19,6 @@ html {
 }
 
 body {
-    font-family: "WDXL Lubrifont TC", sans-serif;
     background-color: #fdf6f0;
     color: #4e342e;
     padding: 0 1rem;
@@ -66,6 +66,11 @@ main {
     padding: 2rem 1rem;
     max-width: 1000px;
     margin: 0 auto;
+}
+
+#menu-section button a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 section {
