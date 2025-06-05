@@ -23,7 +23,7 @@ html {
     display: flex;
     justify-content: center;
     width: 100%;             /* Imagen ocupa todo el ancho */
-    height: 50vh;            /* Altura: mitad del alto de la pantalla */
+    height: 30vh;            /* Altura: mitad del alto de la pantalla */
     object-fit: cover;       /* Escala imagen sin perder proporciones ni salirse */
     object-position: center center; /* Centra imagen en ambas direcciones */
 }
@@ -198,39 +198,44 @@ footer {
     display: none;
 }
 
-/* Para dispositivos de hasta 480px de ancho */
+/* Esto aplica solo a pantallas pequeñas, por ejemplo celulares (hasta 480px de ancho) */
 @media (max-width: 480px) {
+
+    /* El icono del menú hamburguesa (el que abre el menú) */
     .menu-icon {
-        display: flex;
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        z-index: 4;
-        background-color: #5d4037;
-        color: #fffaf3;
-        padding: 0.5rem;
-        border-radius: 6px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        display: flex; /* Lo muestro como un contenedor flexible (puedo alinear cosas dentro si quiero) */
+        position: fixed; /* Siempre visible aunque se haga scroll, se queda "pegado" */
+        top: 1rem; /* Lo bajo un poquito desde arriba (1rem = ±16px) */
+        right: 1rem; /* Lo separo un poco del borde derecho */
+        z-index: 4; /* Lo pongo por encima de otros elementos, mientras más alto el número, más "encima" está */
+        background-color: #5d4037; /* Color de fondo marrón oscuro (puedo cambiarlo si quiero otro estilo) */
+        color: #fffaf3; /* Color del ícono o texto blanco amarillento */
+        padding: 0.5rem; /* Espaciado interno: le da "aire" alrededor del contenido */
+        border-radius: 6px; /* Esquinas redondeadas (más bonito que cuadrado puro) */
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra sutil para que se vea elevado */
     }
 
+    /* El menú que aparece cuando hago clic en el icono (modo responsive) */
     .responsive-nav {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #5d4037;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem 0;
-        z-index: 3;
+        position: fixed; /* Se queda fijo en pantalla */
+        top: 60px; /* Aparece un poco más abajo del icono, como si colgara de él */
+        left: 0; /* Pegado al borde izquierdo */
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        background-color: #5d4037; /* Mismo fondo marrón que el icono (consistencia visual) */
+        display: none; /* Oculto por defecto, solo se muestra si se activa */
+        flex-direction: column; /* Los elementos (enlaces del menú) se apilan en columna */
+        align-items: center; /* Centra horizontalmente cada ítem del menú */
+        padding: 1rem 0; /* Espacio vertical arriba y abajo */
+        z-index: 3; /* Un poco por debajo del icono, pero encima del contenido de fondo */
     }
 
+    /* Asegura que la lista del menú (<ul>) también esté en columna */
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Los <li> se apilan verticalmente */
     }
 
+    /* Cuando el checkbox con id "menu-toggle" está marcado (checked)... */
     #menu-toggle:checked ~ .responsive-nav {
-        display: flex;
+        display: flex; /* ...muestra el menú cambiando su display de "none" a "flex" */
     }
 }
