@@ -1,0 +1,45 @@
+/* style.css
+   Este archivo contiene los estilos generales para la página principal.
+*/
+
+/* Habilita desplazamiento suave al hacer clic en anclas */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Configuración base para todos los elementos */
+* {
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para banner de imagen */
+.img-banner img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    background-color: #fdf6f0;
+    color: #4e342e;
+    padding: 0 1rem;
+}
+
+/* Encabezado principal */
+header {
+    text-align: center;
+    background-color: #6d4c41;
+    padding: 1rem 0;
+}
+
+/* Logo o imagen dentro del encabezado */
+header img {
+    height: 60px;
+}

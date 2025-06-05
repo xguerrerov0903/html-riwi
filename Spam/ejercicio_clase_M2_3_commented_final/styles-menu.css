@@ -1,0 +1,99 @@
+/* styles-menu.css
+   This file contains styles for the Café de la Loma menu page.
+   It uses CSS Grid for layout and applies styling to product cards, text, and layout.
+*/
+
+/* General body styling */
+body {
+    font-family: 'WDXL Lubrifont TC', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header style */
+.menu-header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation list inside header */
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Section title styling */
+.menu-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+/* Product grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 20px;
+}
+
+/* Card container for each product */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Product image inside the card */
+.image-product img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Description styling */
+.description {
+    padding: 10px;
+    font-size: 0.95rem;
+}
+
+/* Price and button alignment */
+.right-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Price section */
+.price h3 {
+    color: #27ae60;
+    margin: 0;
+}
+
+/* Buy button */
+.button-buy button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-buy button:hover {
+    background-color: #2980b9;
+}

@@ -1,147 +1,168 @@
-
+/* Permite un desplazamiento suave al hacer clic en los enlaces del documento */
 html {
   scroll-behavior: smooth;
 }
 
+/* Aplica box-sizing a todos los elementos para incluir el padding y el border en el tamaño total */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* Estilo general del body del documento */
 body {
-    font-family: "WDXL Lubrifont TC", sans-serif;
-    background-color: #f8ece2;
-    margin: 0;
-    padding: 0;
+  /* Fuente personalizada importada de Google Fonts */
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  /* Color de fondo general del sitio */
+  background-color: #f8ece2;
+  /* Elimina márgenes y rellenos por defecto */
+  margin: 0;
+  padding: 0;
 }
 
+/* Estilo del header principal específico del menú */
 header.menu-header {
-    background-color: #3a2e28;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+  background-color: #3a2e28; /* Fondo oscuro simulando café */
+  color: white; /* Texto en blanco para contraste */
+  display: flex; /* Flexbox para alineación horizontal */
+  justify-content: space-between; /* Espacio entre título y navegación */
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 20px; /* Relleno interno uniforme */
 }
 
+/* Estilo de la lista de navegación */
 .nav-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
+  display: flex; /* Flex para organizar elementos en fila */
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina relleno interno */
 }
 
-
+/* Estilo de los enlaces del menú de navegación */
 .nav-list a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
+  margin: 0 15px; /* Espacio horizontal entre enlaces */
+  color: white; /* Color blanco del texto */
+  text-decoration: none; /* Elimina subrayado */
 }
 
+/* Títulos de cada sección del menú */
 .menu-title {
-    text-align: center;
-    color: #4e3629;
-    font-size: 2rem;
-    margin-top: 40px;
-    margin-bottom: 20px;
+  text-align: center; /* Centra el texto */
+  color: #4e3629; /* Color marrón oscuro */
+  font-size: 2rem; /* Tamaño grande del título */
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
+/* Contenedor en formato grid para organizar los productos */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 0 2rem;
+  display: grid; /* Utiliza grid layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 20px; /* Espacio entre columnas y filas */
+  padding: 0 2rem; /* Espaciado horizontal interno */
 }
 
+/* Tarjeta individual de producto */
 .card {
-    width: 100%;
-    border: 6px double #8d6e63;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 0 auto;
-    box-shadow: 8px 8px 5px rgba(94, 78, 66, 0.2);
-    background-color: #eee1d8;
-    transition: transform 0.6s, box-shadow 0.6s;
+  width: 100%; /* Ocupar todo el ancho de su contenedor */
+  border: 6px double #8d6e63; /* Borde doble con color café */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px;
+  margin: 0 auto; /* Centrado automático */
+  box-shadow: 8px 8px 5px rgba(94, 78, 66, 0.2); /* Sombra para profundidad */
+  background-color: #eee1d8; /* Fondo claro tipo pergamino */
+  transition: transform 0.6s, box-shadow 0.6s; /* Animación suave al hacer hover */
 }
 
+/* Efecto hover en la tarjeta de producto */
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 10px 10px 9px rgba(168, 129, 101, 0.4);
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 10px 10px 9px rgba(168, 129, 101, 0.4); /* Sombra más pronunciada */
 }
 
+/* Tipografía específica para ciertos elementos */
 header h1, .description, .price {
-    font-family: "WDXL Lubrifont TC", sans-serif;
+  font-family: "WDXL Lubrifont TC", sans-serif;
 }
 
+/* Contenedor de la imagen del producto */
 .image-product {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  width: 100%;
 }
 
+/* Estilo de la imagen dentro de la tarjeta */
 .image-product img {
-    width: 95%;
-    height: 200px;
-    object-fit: cover;
-    object-position: center center;
-    border-radius: 8px;
-    display: block;
+  width: 95%; /* Usa casi todo el espacio disponible */
+  height: 200px; /* Altura fija */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  object-position: center center; /* Centra la imagen */
+  border-radius: 8px;
+  display: block; /* Evita espacios en blanco alrededor de la imagen */
 }
 
+/* Descripción del producto */
 .description {
-    color: #5d4037;
-    font-size: medium;
-    margin-top: 10px;
+  color: #5d4037; /* Color marrón oscuro */
+  font-size: medium;
+  margin-top: 10px;
 }
 
+/* Precio del producto */
 .price {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-    font-size: large;
-    color: #3e2723;
-    text-shadow: 1px 1px #a1887f;
-    text-decoration: underline;
+  display: flex;
+  flex-direction: column; /* Organización vertical */
+  align-items: flex-end; /* Alineación a la derecha */
+  width: 100%;
+  font-size: large;
+  color: #3e2723; /* Marrón oscuro */
+  text-shadow: 1px 1px #a1887f; /* Sombra sutil para destacar */
+  text-decoration: underline; /* Subrayado del precio */
 }
 
+/* Contenedor del botón de compra */
 .button-buy {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center; /* Centra el botón */
+  margin-top: 10px;
 }
 
+/* Botón de compra */
 .button-buy button {
-    font-family: "WDXL Lubrifont TC", sans-serif;
-    color: white;
-    background-color: #6d4c41;
-    border-radius: 4px;
-    font-size: medium;
-    transition: background-color 0.5s;
-    border: 0;
-    padding: 6px 12px;
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  color: white;
+  background-color: #6d4c41; /* Marrón medio */
+  border-radius: 4px;
+  font-size: medium;
+  transition: background-color 0.5s; /* Animación al pasar el mouse */
+  border: 0;
+  padding: 6px 12px;
 }
 
+/* Efecto hover del botón */
 .button-buy button:hover {
-    background-color: #8d6e63;
+  background-color: #8d6e63; /* Cambio a tono más claro */
 }
 
-/* Responsivo */
+/* Estilos responsivos para pantallas medianas (tablets) */
 @media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+  }
 }
 
+/* Estilos responsivos para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-    header.menu-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .nav-list {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
+  .grid-container {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
 
+  header.menu-header {
+    flex-direction: column; /* Elementos uno debajo del otro */
+    align-items: flex-start; /* Alineados a la izquierda */
+  }
+
+  .nav-list {
+    flex-direction: column; /* Menú vertical */
+    align-items: flex-start;
+  }
+}
